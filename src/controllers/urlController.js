@@ -95,7 +95,7 @@ const createUrl = async function (req, res) {
                                 }
                     
                                 
-                 const saveShortUrl = await SET_ASYNC(`${urlCode}`, JSON.stringify(result.shortUrl))
+                 const saveShortUrl = await SET_ASYNC(`${urlCode}`, JSON.stringify(result))
                  console.log(saveShortUrl)
                 return res.status(201).send({ status: true,msg: "create successfully", data: result })
             }
