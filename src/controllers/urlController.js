@@ -78,7 +78,7 @@ const createUrl = async function (req, res) {
             let url = await UrlModel.findOne({ longUrl:longUrl}).select({_id:0})
             
             if (url ) {
-                    return res.status(400).send({ status: true, message: "This url is already shorten" , msg:url})
+                    return res.status(400).send({ status: false, message: "This url is already shorten" , msg:url})
 
                 } else {
                   // To create shorturl from adding the baseurl and urlcode
